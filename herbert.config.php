@@ -61,21 +61,21 @@ return [
      * The routes to auto-load.
      */
     'routes' => [
-        'MyPlugin' => __DIR__ . '/app/routes.php'
+        'WPQuip' => __DIR__ . '/app/routes.php'
     ],
 
     /**
      * The panels to auto-load.
      */
     'panels' => [
-        'MyPlugin' => __DIR__ . '/app/panels.php'
+        'WPQuip' => __DIR__ . '/app/panels.php'
     ],
 
     /**
      * The APIs to auto-load.
      */
     'apis' => [
-        'MyPlugin' => __DIR__ . '/app/api.php'
+        'WPQuip' => __DIR__ . '/app/api.php'
     ],
 
     /**
@@ -86,7 +86,7 @@ return [
      * when rendering a view in twig.
      */
     'views' => [
-        'MyPlugin' => __DIR__ . '/resources/views'
+        'WPQuip' => __DIR__ . '/resources/views'
     ],
 
     /**
