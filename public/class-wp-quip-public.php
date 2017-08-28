@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public
+ * @package    WP_Quip
+ * @subpackage WP_Quip/public
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Public {
+class WP_Quip_Public {
 
 	/**
 	 * The ID of this plugin.
