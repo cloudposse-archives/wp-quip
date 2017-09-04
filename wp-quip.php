@@ -55,7 +55,6 @@ if ( !class_exists( 'WPQuip' ) ):
         public function __construct() {
 
             $this->includes();
-
             add_action( 'plugins_loaded', array($this, 'init') );
 
         }
@@ -67,7 +66,9 @@ if ( !class_exists( 'WPQuip' ) ):
          */
         public function includes() {
 
-            require_once plugin_dir_path( WPQ_FILE ) . '/includes/shortcodes.php';
+            require_once WPQ_PATH . '/includes/libraries/simple_html_dom.php';
+            require_once WPQ_PATH . '/includes/functions.php';
+            require_once WPQ_PATH . '/includes/shortcodes.php';
 
         }
 
