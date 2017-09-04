@@ -15,9 +15,15 @@ if ( !function_exists('trim_unicode_space') ) {
  */
 if ( !function_exists('wpq_get_html_document') ) {
     function wpq_get_html_document($url, $args) {
-        $response = wp_remote_retrieve_body(wp_remote_get($url, $args));
-        $html = str_get_html(json_decode($response)->html);
-        return $html;
+        $html = get_transient('wpquip_html');
+        if ( !empty($html) ) {
+            return $html;
+        } else {
+            $response = wp_remote_retrieve_body(wp_remote_get($url, $args));
+            $html = str_get_html(json_decode($response)->html);
+            set_transient('wpquip_html', $html, HOUR_IN_SECONDS); // todo: take arg for time
+            return $html;
+        }
     }
 }
 
@@ -26,9 +32,15 @@ if ( !function_exists('wpq_get_html_document') ) {
  */
 if ( !function_exists('wpq_create_encoded_image') ) {
     function wpq_create_encoded_image($src, $args) {
-        $url = "https://platform.quip.com/1/blob/" . $src;
-        $response = wp_remote_retrieve_body(wp_remote_get($url, $args));
-        $image = base64_encode($response);
-        return $image;
+        $image = get_transient('wpquip_image');
+        if ( !empty($image) ) {
+            return $image;
+        } else {
+            $url = "https://platform.quip.com/1/blob/" . $src;
+            $response = wp_remote_retrieve_body(wp_remote_get($url, $args));
+            $image = base64_encode($response);
+            set_transient('wpquip_image', $image, HOUR_IN_SECONDS); // todo: take arg for time
+            return $image;
+        }
     }
 }
