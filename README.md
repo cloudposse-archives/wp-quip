@@ -5,7 +5,7 @@ Quip integration for Wordpress
 
 ## Introduction
 
-`WP Qiup` plugin uses WordPress shortcodes to embed Quip documents into WordPress pages and blog posts.
+`WP Quip` plugin uses WordPress shortcodes to embed Quip documents into WordPress pages and blog posts.
 
 https://codex.wordpress.org/Shortcode
 
@@ -29,7 +29,7 @@ https://en.support.wordpress.com/shortcodes/
 
 ## Usage
 
-To embed the content of a Quip document into a WordPress page or blog post, use `quip` shortcode.
+To embed the content of a Quip document into a WordPress page or blog post, use the `quip` shortcode.
 
 `quip` shortcode accepts two attributes and has the following format:
 
@@ -44,7 +44,7 @@ where
 * `ttl` (Optional) - Time-To-Live in seconds. 
 After the first request to the Quip API, the plugin caches the content of the document (HTML and images) for the specified amount of time (seconds).
 All consecutive requests to the same page or blog post will not call the Quip API again but will retrieve the document from the internal cache, making the pages faster.
-After the `ttl` expires, the plugin will call the API again and cache the result. 
+After the `ttl` expires, the plugin will call the Quip API and cache the result again. 
 If the `ttl` attribute is not provided, the default value of 3600 seconds (1 hour) is used.
 
 
