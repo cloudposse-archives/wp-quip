@@ -33,13 +33,15 @@ To embed the content of a Quip document into a WordPress page or blog post, use 
 
 `quip` shortcode accepts two attributes and has the following format:
 
+```
 [quip id="mWnnAszre3MW" ttl=7200]
+```
 
 where
 
-* id (Required) - The ID of the Quip document (_e.g._ https://quip.com/mWnnAszre3MW)
+* `id` (Required) - The ID of the Quip document (_e.g._ https://quip.com/mWnnAszre3MW)
 
-* ttl (Optional) - Time-To-Live in seconds. 
+* `ttl` (Optional) - Time-To-Live in seconds. 
 After the first request to the Quip API, the plugin caches the content of the document (HTML and images) for the specified amount of time (seconds).
 All consecutive requests to the same page or blog post will not call the Quip API again but will retrieve the document from the internal cache, making the pages faster.
 After the `ttl` expires, the plugin will call the API again and cache the result. 
