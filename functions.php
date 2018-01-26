@@ -9,18 +9,19 @@ function cloudposse_wp_quip_plugin_trim_unicode_space( $text ) {
 
 
 /**
- * Makes request for HTML document
+ * Makes request for Quip document
  *
  * @param $id
  * @param $ttl
  * @param $args
+ * @param bool $include_images
  *
  * @return bool|mixed|simple_html_dom
  * @throws Exception
  */
-function cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args ) {
+function cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args, $include_images = true ) {
 	$url           = CLOUDPOSSE_WP_QUIP_PLUGIN_QUIP_THREAD_BASE_URL . $id;
-	$transient_key = CLOUDPOSSE_WP_QUIP_PLUGIN_TRANSIENT_KEY . '-' . $url;
+	$transient_key = CLOUDPOSSE_WP_QUIP_PLUGIN_TRANSIENT_KEY . '-' . $url . "-" . $include_images;
 	$html          = get_transient( $transient_key );
 	if ( $html !== false && ! empty( $html ) ) {
 		return $html;
@@ -31,27 +32,31 @@ function cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args ) {
 			throw new Exception( $response->get_error_message() );
 		} elseif ( $response['response'] && $response['response']['code'] && $response['response']['code'] !== 200 ) {
 			$err = $response['body'];
-			throw new Exception( $err ? $err : "Error from Quip API" );
+			throw new Exception( $err ? $err : "Quip API Error" );
 		} else {
 			$body     = wp_remote_retrieve_body( $response );
 			$body_obj = json_decode( $body );
 			$html     = str_get_html( $body_obj->html );
 
 			if ( $html && is_object( $html ) ) {
+
 				foreach ( $html->find( 'p' ) as $p ) {
 					$p->innertext = cloudposse_wp_quip_plugin_trim_unicode_space( $p->innertext );
 				}
 
-				foreach ( $html->find( 'img' ) as $img ) {
-					$src            = str_replace( '/blob/', '', $img->attr['src'] );
-					$image          = cloudposse_wp_quip_plugin_create_encoded_image( $src, $ttl, $args );
-					$img->outertext = "<img src='data:image/jpeg;base64," . $image . "'>";
+				if ( $include_images ) {
+					foreach ( $html->find( 'img' ) as $img ) {
+						$src            = str_replace( '/blob/', '', $img->attr['src'] );
+						$image          = cloudposse_wp_quip_plugin_create_encoded_image( $src, $ttl, $args );
+						$img->outertext = "<img src='data:image/jpeg;base64," . $image . "'>";
+					}
 				}
 			}
 
+			$html = "<div class='wp-quip'>" . $html . "</div>";
 			set_transient( $transient_key, $html, $ttl );
 
-			return get_transient( $transient_key );
+			return $html;
 		}
 	}
 }
