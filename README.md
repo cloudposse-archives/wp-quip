@@ -1,11 +1,11 @@
 # wp-quip
 
-Quip integration for WordPress
+[Quip](https://quip.com/) integration for WordPress
 
 
 ## Introduction
 
-`WP Quip` plugin uses WordPress shortcodes to embed Quip documents into WordPress pages and blog posts.
+`WP Quip` plugin uses WordPress shortcodes to embed [Quip](https://quip.com/) documents into WordPress pages and blog posts.
 
 https://codex.wordpress.org/Shortcode
 
@@ -29,13 +29,13 @@ https://codex.wordpress.org/Shortcode_API
 
 ##
 
-![CloudPosse_WP_Quip_Plugin_Settings](images/CloudPosse_WP_Quip_Plugin_Settings.png)
+![CloudPosse_WP_Quip_Plugin_Settings](screenshot-1.png)
 
 
 
 ## Usage
 
-To embed the content of a Quip document into a WordPress page or blog post, use the `quip` shortcode.
+To embed the content of a [Quip](https://quip.com/) document into a WordPress page or blog post, use the `quip` shortcode.
 
 `quip` shortcode accepts two attributes and has the following format:
 

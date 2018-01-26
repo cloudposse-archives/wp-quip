@@ -183,7 +183,7 @@ function cloudposse_wp_quip_plugin_display_settings_page() {
     </div>
 
     <div style="margin: 50px 0 0 0">
-        <img style="width: 300px" src="<?php echo( plugin_dir_url( __FILE__ ) . "images/CloudPosse_Logo.png" ); ?>"">
+        <img style="width: 300px" src="<?php echo( plugin_dir_url( __FILE__ ) . "screenshot-1.png" ); ?>"">
     </div>
 
 	<?php
