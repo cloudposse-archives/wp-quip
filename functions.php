@@ -53,7 +53,7 @@ function cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args, $include
 				}
 			}
 
-			$html = "<div class='wp-quip'>" . $html . "</div>";
+			$html = '<div class="wp-quip">' . $html . '</div>';
 			set_transient( $transient_key, $html, $ttl );
 
 			return $html;
