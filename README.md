@@ -27,9 +27,10 @@ https://codex.wordpress.org/Shortcode_API
 > To generate a Quip API Access Token, visit this page: https://quip.com/dev/token . Whenever you generate a new token, all previous tokens are automatically invalidated.
 
 
-##
+#
+#### WP Quip plugin Settings page
 
-![CloudPosse_WP_Quip_Plugin_Settings](screenshot-1.png)
+![WP Quip plugin Settings page](screenshot-1.png)
 
 
 
@@ -53,6 +54,18 @@ All consecutive requests to the same page or blog post will not call the Quip AP
 After the `ttl` expires, the plugin will call the Quip API and cache the result again. 
 If the `ttl` attribute is not provided, the default value of 7200 seconds (2 hours) is used.
 You can change the default value in `Quip Settings` (menu `Settings/WP Quip`).
+
+
+#
+#### WordPress post editor with a `quip` shortcode
+
+![WordPress post editor with a 'quip' shortcode](screenshot-2.png)
+
+
+#
+#### Quip document embedded into a WordPress blog post
+
+![Quip document embedded into a WordPress blog post](screenshot-3.png)
 
 
 ## References

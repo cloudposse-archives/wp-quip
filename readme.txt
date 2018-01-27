@@ -12,9 +12,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Quip integration for WordPress.
 `WP Quip` plugin uses WordPress shortcodes to embed Quip documents into WordPress pages and blog posts.
 
-== Description ==
-Quip integration for WordPress
 
+== Description ==
 
 ## Introduction
 
@@ -62,6 +61,9 @@ Whenever you generate a new token, all previous tokens are automatically invalid
 
 == Screenshots ==
 1. WP Quip plugin Settings page
+2. WordPress post editor with a 'quip' shortcode
+3. Quip document embedded into a WordPress blog post
+
 
 == Changelog ==
 = 1.0 =
