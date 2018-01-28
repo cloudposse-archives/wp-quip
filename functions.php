@@ -23,7 +23,7 @@ function cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args, $include
 	$url           = CLOUDPOSSE_WP_QUIP_PLUGIN_QUIP_THREAD_BASE_URL . $id;
 	$transient_key = CLOUDPOSSE_WP_QUIP_PLUGIN_TRANSIENT_KEY . '-' . $url . "-" . $include_images;
 	$html          = get_transient( $transient_key );
-	if ( $html == false && ! empty( $html ) ) {
+	if ( $html !== false && ! empty( $html ) ) {
 		return $html;
 	} else {
 		$response = wp_remote_get( $url, $args );
@@ -45,7 +45,11 @@ function cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args, $include
 				}
 
 				foreach ( $html->find( 'pre' ) as $pre ) {
-					$pre->attr['style'] = 'color: black; background: #eee; font-weight: 400; font-family: Courier, monospace; font-size: 0.9375rem; line-height: 1.6; max-width: 100%; overflow: auto; padding: 1.6em; display: block; white-space: pre; margin: 1em 0 1.6em 0;';
+					$pre->attr['style'] = 'color: black; background: #eee; font-weight: 400; font-family: Courier, monospace; font-size: 0.9375rem; line-height: 1.6; overflow: auto; padding: 1.6em; display: block; white-space: pre; margin: 1em 0 1.6em 0;';
+				}
+
+				foreach ( $html->find( 'code' ) as $code ) {
+					$code->attr['style'] = 'color: black; background: #eee;';
 				}
 
 				foreach ( $html->find( 'p' ) as $p ) {
