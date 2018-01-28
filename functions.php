@@ -23,7 +23,7 @@ function cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args, $include
 	$url           = CLOUDPOSSE_WP_QUIP_PLUGIN_QUIP_THREAD_BASE_URL . $id;
 	$transient_key = CLOUDPOSSE_WP_QUIP_PLUGIN_TRANSIENT_KEY . '-' . $url . "-" . $include_images;
 	$html          = get_transient( $transient_key );
-	if ( $html == false && ! empty( $html ) ) {
+	if ( $html !== false && ! empty( $html ) ) {
 		return $html;
 	} else {
 		$response = wp_remote_get( $url, $args );
