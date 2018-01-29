@@ -227,4 +227,4 @@ function cloudposse_wp_quip_plugin_handle_settings_save() {
 }
 
 // Enqueue plugin styles
-wp_enqueue_style( "cloudposse_wp_quip_plugin", plugin_dir_url( __FILE__ ) . "css/wp_quip_plugin.css", array(), CLOUDPOSSE_WP_QUIP_PLUGIN_VERSION, "all" );
+wp_enqueue_style( "cloudposse_wp_quip_plugin", plugin_dir_url( __FILE__ ) . "css/plugin.css", array(), CLOUDPOSSE_WP_QUIP_PLUGIN_VERSION, "all" );
