@@ -1,8 +1,8 @@
-.wp-quip * {
+div.wp-quip * {
     color: black !important;
 }
 
-.wp-quip pre {
+div.wp-quip pre {
     border: 0;
     color: black !important;
     background: #eee !important;
@@ -17,13 +17,13 @@
     margin: 1em 0 1.6em 0 !important;
 }
 
-.wp-quip pre * {
+div.wp-quip pre * {
     color: black !important;
     background: #eee !important;
     font-size: 1rem !important;
 }
 
-.wp-quip code {
+div.wp-quip code {
     border: 0;
     color: black !important;
     background: #eee !important;
