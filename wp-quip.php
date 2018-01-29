@@ -225,3 +225,6 @@ function cloudposse_wp_quip_plugin_handle_settings_save() {
 	header( "Location: " . $redirect_url );
 	exit;
 }
+
+// Enqueue plugin styles
+wp_enqueue_style( "cloudposse_wp_quip_plugin", plugin_dir_url( __FILE__ ) . "css/cloudposse_wp_quip_plugin.css", array(), CLOUDPOSSE_WP_QUIP_PLUGIN_VERSION, "all" );

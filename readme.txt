@@ -31,7 +31,7 @@ To embed the content of a [Quip](https://quip.com/) document into a WordPress pa
 `quip` shortcode accepts two attributes and has the following format:
 
 ```
-[quip id=\"mWnnAszre3MW\" ttl=7200]
+[quip id="mWnnAszre3MW" ttl=7200]
 ```
 
 where
@@ -45,6 +45,12 @@ After the `ttl` expires, the plugin will call the Quip API and cache the result 
 If the `ttl` attribute is not provided, the default value of 7200 seconds (2 hours) is used.
 You can change the default value in `Quip Settings` (menu `Settings/WP Quip`).
 If `ttl` is set to `0`, the plugin will not cache the responses, and every request to the WordPress page or blog post will call the Quip API.
+
+__NOTE__: Setting `ttl` to `0` also invalidates the document cache.
+This could be used if you change the Quip document and want the changes to be reflected on the website immediately.
+In this case, update the document in Quip, set `ttl` to `0` in the `quip` shortcode,
+refresh the WordPress page or blog post in the browser to invalidate the cache,
+and then set `ttl` back to its original value.
 
 
 == Installation ==

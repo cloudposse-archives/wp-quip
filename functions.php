@@ -74,15 +74,11 @@ function cloudposse_wp_quip_plugin_get_html_document_from_quip_api( $id, $ttl, $
 	if ( $html && is_object( $html ) ) {
 
 		foreach ( $html->childNodes() as $node ) {
-			$node->attr['style'] = 'color: black;';
+			$node->attr['class'] = 'cloudposse-wp-quip-plugin-node';
 		}
 
 		foreach ( $html->find( 'pre' ) as $pre ) {
-			$pre->attr['style'] = 'color: black; background: #eee; font-weight: 400; font-family: Courier, monospace; font-size: 0.9375rem; line-height: 1.6; overflow: auto; padding: 1.6em; display: block; white-space: pre; margin: 1em 0 1.6em 0;';
-		}
-
-		foreach ( $html->find( 'code' ) as $code ) {
-			$code->innertext = '<span style="color: black !important; background: #eee !important; font-size: 0.9375rem !important;">' . $code->innertext . '</span>';
+			$pre->attr['class'] = 'cloudposse-wp-quip-plugin-pre';
 		}
 
 		foreach ( $html->find( 'p' ) as $p ) {
