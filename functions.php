@@ -73,14 +73,6 @@ function cloudposse_wp_quip_plugin_get_html_document_from_quip_api( $id, $ttl, $
 
 	if ( $html && is_object( $html ) ) {
 
-		foreach ( $html->childNodes() as $node ) {
-			$node->attr['class'] = 'cloudposse-wp-quip-plugin-node';
-		}
-
-		foreach ( $html->find( 'pre' ) as $pre ) {
-			$pre->attr['class'] = 'cloudposse-wp-quip-plugin-pre';
-		}
-
 		foreach ( $html->find( 'p' ) as $p ) {
 			$p->innertext = cloudposse_wp_quip_plugin_trim_unicode_space( $p->innertext );
 		}

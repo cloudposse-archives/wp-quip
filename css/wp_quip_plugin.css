@@ -1,8 +1,9 @@
-.cloudposse-wp-quip-plugin-node {
+.wp-quip * {
     color: black !important;
 }
 
-.cloudposse-wp-quip-plugin-pre {
+.wp-quip pre {
+    border: 0;
     color: black !important;
     background: #eee !important;
     font-weight: 400 !important;
@@ -16,13 +17,14 @@
     margin: 1em 0 1.6em 0 !important;
 }
 
-.cloudposse-wp-quip-plugin-pre * {
+.wp-quip pre * {
     color: black !important;
     background: #eee !important;
     font-size: 1rem !important;
 }
 
 .wp-quip code {
+    border: 0;
     color: black !important;
     background: #eee !important;
     font-size: 1rem !important;
