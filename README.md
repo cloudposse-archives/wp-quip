@@ -50,10 +50,11 @@ where
 
 * `ttl` (Optional) - Time-To-Live in seconds. 
 After the first request to the Quip API, the plugin caches the content of the document (HTML and images) for the specified amount of time (seconds).
-All consecutive requests to the same page or blog post will not call the Quip API again but will retrieve the document from the internal cache, making the pages faster.
+All consecutive requests to the same page or blog post will not call the Quip API again but instead will retrieve the document from the internal cache, making the pages faster.
 After the `ttl` expires, the plugin will call the Quip API and cache the result again. 
 If the `ttl` attribute is not provided, the default value of 7200 seconds (2 hours) is used.
 You can change the default value in `Quip Settings` (menu `Settings/WP Quip`).
+If `ttl` is set to `0`, the plugin will not cache the responses, and every request to the WordPress page or blog post will call the Quip API.
 
 
 #

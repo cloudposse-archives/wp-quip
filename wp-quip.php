@@ -64,17 +64,22 @@ function cloudposse_wp_quip_plugin_display_document_func( $attrs ) {
 		}
 
 		$id = $attrs['id'];
-		if ( ! $id ) {
-			throw new Exception( "'id' attribute is required for [quip] shortcode" );
+		if ( ! $id || ! is_string( $id ) ) {
+			throw new Exception( "'id' attribute is required for [quip] shortcode and it must be a string" );
 		}
 
-		$ttl = $attrs['ttl'];
-		if ( ! $ttl ) {
+		if ( ! isset( $attrs['ttl'] ) ) {
 			$ttl = get_option( CLOUDPOSSE_WP_QUIP_PLUGIN_DEFAULT_TTL_KEY );
 			if ( ! $ttl ) {
 				$ttl = CLOUDPOSSE_WP_QUIP_PLUGIN_DEFULT_TTL_SECONDS;
 				update_option( CLOUDPOSSE_WP_QUIP_PLUGIN_DEFAULT_TTL_KEY, $ttl );
 			}
+		} else {
+			$ttl = $attrs['ttl'];
+		}
+
+		if ( ! is_numeric( $ttl ) ) {
+			throw new Exception( "'ttl' attribute must be an integer" );
 		}
 
 		$args = array(
@@ -83,7 +88,7 @@ function cloudposse_wp_quip_plugin_display_document_func( $attrs ) {
 			)
 		);
 
-		return cloudposse_wp_quip_plugin_get_html_document( $id, $ttl, $args, $include_images );
+		return cloudposse_wp_quip_plugin_get_html_document( $id, intval( $ttl ), $args, $include_images );
 
 	} catch ( Exception $e ) {
 		cloudposse_wp_quip_plugin_log( "Exception: " . $e->getMessage() );
@@ -210,7 +215,7 @@ function cloudposse_wp_quip_plugin_add_action_link_func( $links, $file ) {
 add_action( 'admin_post_update_cloudposse_wp_quip_plugin_settings', 'cloudposse_wp_quip_plugin_handle_settings_save' );
 function cloudposse_wp_quip_plugin_handle_settings_save() {
 	$ttl = ( ! empty( $_POST[ CLOUDPOSSE_WP_QUIP_PLUGIN_DEFAULT_TTL_KEY ] ) ) ? $_POST[ CLOUDPOSSE_WP_QUIP_PLUGIN_DEFAULT_TTL_KEY ] : CLOUDPOSSE_WP_QUIP_PLUGIN_DEFULT_TTL_SECONDS;
-	update_option( CLOUDPOSSE_WP_QUIP_PLUGIN_DEFAULT_TTL_KEY, $ttl, true );
+	update_option( CLOUDPOSSE_WP_QUIP_PLUGIN_DEFAULT_TTL_KEY, intval( $ttl ), true );
 
 	$quip_access_token = ( ! empty( $_POST[ CLOUDPOSSE_WP_QUIP_PLUGIN_ACCESS_TOKEN_KEY ] ) ) ? $_POST[ CLOUDPOSSE_WP_QUIP_PLUGIN_ACCESS_TOKEN_KEY ] : null;
 	update_option( CLOUDPOSSE_WP_QUIP_PLUGIN_ACCESS_TOKEN_KEY, $quip_access_token, true );

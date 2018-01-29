@@ -44,6 +44,7 @@ All consecutive requests to the same page or blog post will not call the Quip AP
 After the `ttl` expires, the plugin will call the Quip API and cache the result again.
 If the `ttl` attribute is not provided, the default value of 7200 seconds (2 hours) is used.
 You can change the default value in `Quip Settings` (menu `Settings/WP Quip`).
+If `ttl` is set to `0`, the plugin will not cache the responses, and every request to the WordPress page or blog post will call the Quip API.
 
 
 == Installation ==
