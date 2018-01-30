@@ -1,7 +1,7 @@
 === WP Quip ===
 Contributors:
 Tags: quip, doc
-Donate link: https://cloudposse.com/
+Donate link:
 Requires at least: 4.0
 Tested up to: 4.9.2
 Requires PHP: 5.6
@@ -66,12 +66,19 @@ NOTE: To generate a Quip API Access Token, visit this page: https://quip.com/dev
 Whenever you generate a new token, all previous tokens are automatically invalidated.
 
 
+== Frequently Asked Questions ==
+
+
 == Screenshots ==
 1. WP Quip plugin Settings page
 2. WordPress post editor with a 'quip' shortcode
 3. Quip document embedded into a WordPress blog post
+4. Quip document embedded into a WordPress blog post
 
 
 == Changelog ==
 = 1.0 =
 * Initial release.
+
+
+== Upgrade Notice ==
