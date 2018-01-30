@@ -73,6 +73,7 @@ Whenever you generate a new token, all previous tokens are automatically invalid
 1. WP Quip plugin Settings page
 2. WordPress post editor with a 'quip' shortcode
 3. Quip document embedded into a WordPress blog post
+4. Quip document embedded into a WordPress blog post
 
 
 == Changelog ==

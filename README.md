@@ -75,6 +75,12 @@ and then set `ttl` back to its original value.
 ![Quip document embedded into a WordPress blog post](assets/screenshot-3.png)
 
 
+#
+#### Quip document embedded into a WordPress blog post
+
+![Quip document embedded into a WordPress blog post](assets/screenshot-4.png)
+
+
 ## References
 
 For more information on Quip API, visit https://quip.com/dev/automation/documentation
