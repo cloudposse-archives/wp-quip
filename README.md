@@ -1,6 +1,10 @@
 # wp-quip
 
+![WP Quip plugin Settings page](assets/icon-128×128.png)
+
+
 [Quip](https://quip.com/) integration for WordPress
+
 
 
 ## Introduction
