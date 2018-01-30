@@ -30,7 +30,7 @@ https://codex.wordpress.org/Shortcode_API
 #
 #### WP Quip plugin Settings page
 
-![WP Quip plugin Settings page](screenshot-1.png)
+![WP Quip plugin Settings page](assets/screenshot-1.png)
 
 
 
@@ -66,13 +66,13 @@ and then set `ttl` back to its original value.
 #
 #### WordPress post editor with a `quip` shortcode
 
-![WordPress post editor with a 'quip' shortcode](screenshot-2.png)
+![WordPress post editor with a 'quip' shortcode](assets/screenshot-2.png)
 
 
 #
 #### Quip document embedded into a WordPress blog post
 
-![Quip document embedded into a WordPress blog post](screenshot-3.png)
+![Quip document embedded into a WordPress blog post](assets/screenshot-3.png)
 
 
 ## References
