@@ -1,0 +1,31 @@
+div.wp-quip * {
+    color: black !important;
+}
+
+div.wp-quip pre {
+    border: 0;
+    color: black !important;
+    background: #eee !important;
+    font-weight: 400 !important;
+    font-family: Courier, monospace !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    overflow: auto !important;
+    padding: 1.6em !important;
+    display: block !important;
+    white-space: pre !important;
+    margin: 1em 0 1.6em 0 !important;
+}
+
+div.wp-quip pre * {
+    color: black !important;
+    background: #eee !important;
+    font-size: 1rem !important;
+}
+
+div.wp-quip code {
+    border: 0;
+    color: black !important;
+    background: #eee !important;
+    font-size: 1rem !important;
+}
