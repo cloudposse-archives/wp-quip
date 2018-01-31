@@ -1,8 +1,8 @@
 === WP Quip ===
-Contributors:
+Contributors: cloudposse
 Tags: quip, doc
 Donate link:
-Requires at least: 4.0
+Requires at least: 4.2
 Tested up to: 4.9.2
 Requires PHP: 5.6
 Stable tag: 1.0
@@ -10,7 +10,6 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Quip integration for WordPress.
-`WP Quip` plugin uses WordPress shortcodes to embed Quip documents into WordPress pages and blog posts.
 
 
 == Description ==
@@ -54,11 +53,11 @@ and then set `ttl` back to its original value.
 
 
 == Installation ==
-1. Upload `wp-quip` folder to the `/wp-content/plugins/` directory
+1. Install the `WP Quip` plugin
 
-2. Activate the `WP Quip` plugin through the `Plugins` menu in WordPress
+2. Activate the plugin through the `Plugins` menu in WordPress
 
-3. On `Quip Settings` page (menu `Settings/WP Quip`), you can update the default value for `Time-to-Live`
+3. On `Quip Settings` page (menu `Settings/WP Quip`), update the default value for `Time-to-Live` if needed
 
 4. On `Quip Settings` page, enter and save `Quip API Access Token`
 
@@ -82,3 +81,5 @@ Whenever you generate a new token, all previous tokens are automatically invalid
 
 
 == Upgrade Notice ==
+= 1.0 =
+Initial release.

@@ -23,7 +23,7 @@ https://codex.wordpress.org/Shortcode_API
 
 2. Activate the `WP Quip` plugin through the `Plugins` menu in WordPress
 
-3. On `Quip Settings` page (menu `Settings/WP Quip`), you can update the default value for `Time-to-Live` (see [Usage](#usage) for more details)
+3. On `Quip Settings` page (menu `Settings/WP Quip`), update the default value for `Time-to-Live` if needed (see [Usage](#usage) for more details)
 
 4. On `Quip Settings` page, enter and save `Quip API Access Token`
 
