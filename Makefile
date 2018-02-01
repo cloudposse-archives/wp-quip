@@ -1,9 +1,9 @@
 SHELL = /bin/bash
 
-.PHONY : init_svn
-init_svn:
-	./init_svn.sh
+.PHONY : svn_init
+svn_init:
+	./svn_init.sh
 
-.PHONY : release_svn
-release_svn:
-	./release_svn.sh
+.PHONY : svn_release
+svn_release:
+	./svn_release.sh
