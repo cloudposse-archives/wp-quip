@@ -17,7 +17,7 @@ https://codex.wordpress.org/Shortcode_API
 
 
 
-## Installation
+## Manual Installation
 
 1. Upload `wp-quip` folder to the `/wp-content/plugins/` directory
 
@@ -37,7 +37,24 @@ https://codex.wordpress.org/Shortcode_API
 ![WP Quip plugin Settings page](assets/screenshot-1.png)
 
 
+## Installation from wordpress.org plugin directory
 
+https://wordpress.org/plugins/wp-quip/
+
+1. In WordPress Admin, search for `WP Quip` plugin and install it
+
+2. Activate the `WP Quip` plugin
+
+3. On `Quip Settings` page (menu `Settings/WP Quip`), update the default value for `Time-to-Live` if needed (see [Usage](#usage) for more details)
+
+4. On `Quip Settings` page, enter and save `Quip API Access Token`
+
+
+#
+![WP Quip plugin Settings page](images/WordPress_WP_Quip.png)
+
+
+#
 ## Usage
 
 To embed the content of a [Quip](https://quip.com/) document into a WordPress page or blog post, use the `quip` shortcode.
