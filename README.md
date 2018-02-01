@@ -1,6 +1,6 @@
 # wp-quip
 
-![WP Quip plugin Settings page](assets/icon-128×128.png)
+![WP Quip plugin Settings page](assets/icon-128x128.png)
 
 
 [Quip](https://quip.com/) integration for WordPress
@@ -17,13 +17,13 @@ https://codex.wordpress.org/Shortcode_API
 
 
 
-## Installation
+## Manual Installation
 
 1. Upload `wp-quip` folder to the `/wp-content/plugins/` directory
 
 2. Activate the `WP Quip` plugin through the `Plugins` menu in WordPress
 
-3. On `Quip Settings` page (menu `Settings/WP Quip`), you can update the default value for `Time-to-Live` (see [Usage](#usage) for more details)
+3. On `Quip Settings` page (menu `Settings/WP Quip`), update the default value for `Time-to-Live` if needed (see [Usage](#usage) for more details)
 
 4. On `Quip Settings` page, enter and save `Quip API Access Token`
 
@@ -37,7 +37,25 @@ https://codex.wordpress.org/Shortcode_API
 ![WP Quip plugin Settings page](assets/screenshot-1.png)
 
 
+#
+## Installation from wordpress.org plugin repository
 
+https://wordpress.org/plugins/wp-quip/
+
+1. In WordPress Admin, search for `WP Quip` plugin and install it
+
+2. Activate the `WP Quip` plugin
+
+3. On `Quip Settings` page (menu `Settings/WP Quip`), update the default value for `Time-to-Live` if needed (see [Usage](#usage) for more details)
+
+4. On `Quip Settings` page, enter and save `Quip API Access Token`
+
+
+#
+![WP Quip plugin Settings page](images/WordPress_WP_Quip.png)
+
+
+#
 ## Usage
 
 To embed the content of a [Quip](https://quip.com/) document into a WordPress page or blog post, use the `quip` shortcode.
@@ -85,6 +103,7 @@ and then set `ttl` back to its original value.
 ![Quip document embedded into a WordPress blog post](assets/screenshot-4.png)
 
 
+#
 ## References
 
 For more information on Quip API, visit https://quip.com/dev/automation/documentation
