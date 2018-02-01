@@ -37,7 +37,8 @@ https://codex.wordpress.org/Shortcode_API
 ![WP Quip plugin Settings page](assets/screenshot-1.png)
 
 
-## Installation from wordpress.org plugin directory
+#
+## Installation from wordpress.org plugin repository
 
 https://wordpress.org/plugins/wp-quip/
 
@@ -102,6 +103,7 @@ and then set `ttl` back to its original value.
 ![Quip document embedded into a WordPress blog post](assets/screenshot-4.png)
 
 
+#
 ## References
 
 For more information on Quip API, visit https://quip.com/dev/automation/documentation
